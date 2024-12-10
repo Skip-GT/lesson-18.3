@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин</title>
+</head>
+<body>
+    <h1>Магазин</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/shop/">Магазин</a></li>
+            <li><a href="/cart/">Корзина</a></li>
+        </ul>
+    </nav>
+    <ul>
+        {% for item, price in items.items %}
+            <li>{{ item }} - {{ price }} <button>Купить</button></li>
+        {% endfor %}
+    </ul>
+    <a href="/">На главную</a>
+</body>
+</html>
